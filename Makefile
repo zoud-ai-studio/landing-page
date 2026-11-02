@@ -1,26 +1,25 @@
-.PHONY: setup lint type test e2e eval check
+.PHONY: setup check test e2e eval
 
 setup:
 	git config core.hooksPath .githooks
-	@if [ -f pyproject.toml ]; then uv sync; fi
-	@if [ -f web/package.json ]; then npm ci --prefix web; fi
-
-lint:
-	@if [ -f pyproject.toml ]; then uv run ruff check .; fi
-	@if [ -f web/package.json ]; then npm run lint --prefix web; fi
-
-type:
-	@if [ -d app ]; then uv run mypy app; fi
-	@if [ -f web/package.json ]; then npm run typecheck --prefix web; fi
+	npm ci
+	npx playwright install chromium
 
 test:
-	@if [ -f pyproject.toml ]; then uv run pytest -q; fi
+	npm test
 
 e2e:
-	@if [ -f web/package.json ]; then cd web && npx playwright test; fi
+	npm run build
+	npm run e2e
 
 eval:
-	@if [ -f evals/run.py ]; then uv run python evals/run.py; fi
+	npm run build
+	npm run eval
 
-check: lint type test
+check:
+	npm run lint
+	npm run typecheck
+	npm test
+	npm run build
+	test -f out/index.html
 	@echo "make check: OK"

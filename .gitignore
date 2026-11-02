@@ -218,3 +218,12 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+# Node.js and generated frontend artifacts
+node_modules/
+.next/
+out/
+test-results/
+playwright-report/
+.lighthouseci/
+*.tsbuildinfo
