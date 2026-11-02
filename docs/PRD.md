@@ -1,6 +1,6 @@
 ---
 title: "Landing Page"
-status: draft
+status: approved
 created: 2026-11-02
 updated: 2026-11-02
 ---
@@ -25,7 +25,7 @@ Convert visiting founders into booked 20-minute discovery calls.
 ## Assumptions
 
 - Visitors arrive from a LinkedIn post (mobile-first context).
-- Studio name: "Zoud AI Studio". The contact email (hello@zoud.ai) and prices (Starter $499, Growth $1,499, Pro $3,999) are placeholders. TODO: confirm with the Board.
+- Studio name: "Zoud AI Studio". Contact email confirmed: hello@zoud.ae. Prices confirmed: Starter $1,000, Growth $2,000, Pro $3,000.
 - All copy in the stories is a first draft by the PM. TODO: confirm with the Board.
 
 ## Requirements
@@ -50,7 +50,7 @@ The page has exactly 9 sections, in this order:
 
 Every "Book a free call" button opens the user's default email client to a pre-addressed, pre-subjected message:
 
-- **To:** hello@zoud.ai
+- **To:** hello@zoud.ae
 - **Subject:** `Free call request`
 
 No form, no booking system, no data storage.
