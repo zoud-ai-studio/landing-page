@@ -17,9 +17,9 @@ Visitors need to know the ballpark before booking a call. Three packages with "f
 
 | Package | Price (from) | Notes |
 |---------|-------------|-------|
-| Starter | $499 | For a single-page landing site |
-| Growth | $1,499 | For a simple web app |
-| Pro | $3,999 | For a multi-page internal tool or complex app |
+| Starter | $1,000 | For a single-page landing site |
+| Growth | $2,000 | For a simple web app |
+| Pro | $3,000 | For a multi-page internal tool or complex app |
 
 ## Files likely to touch
 - `components/Pricing.tsx`

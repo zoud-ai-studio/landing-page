@@ -77,7 +77,7 @@ flowchart LR
 | Concern | Convention |
 | --- | --- |
 | Naming | Components and files use PascalCase; content keys and props use camelCase; CSS classes use kebab-case scoped by section. |
-| Data & formats | Content collections are readonly arrays with stable string IDs; prices are display strings because no calculation or payment exists; the shared URI is `mailto:hello@zoud.ai?subject=Free%20call%20request`. |
+| Data & formats | Content collections are readonly arrays with stable string IDs; prices are display strings because no calculation or payment exists; the shared URI is `mailto:hello@zoud.ae?subject=Free%20call%20request`. |
 | State | There is no application state or mutation; FAQ openness is browser-owned DOM state and is not persisted. |
 | Accessibility | One `h1`; section headings are `h2`; landmarks and labelled links are semantic; focus is visible; decorative SVGs are hidden from assistive technology. |
 | Configuration | Static-export and quality-tool configuration is committed; public content is not sourced from environment variables. |

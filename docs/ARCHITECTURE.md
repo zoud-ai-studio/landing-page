@@ -45,15 +45,15 @@ Every collection item has a stable string `id`, title, and short body. A `Pricin
 Board-confirmed values override the older placeholder wording in the PRD:
 
 - Studio: `Zoud AI Studio`
-- Email: `hello@zoud.ai`
-- Prices: Starter `$499`, Growth `$1,499`, Pro `$3,999`
+- Email: `hello@zoud.ae`
+- Prices: Starter `$1,000`, Growth `$2,000`, Pro `$3,000`
 - Headline and story copy: the drafts marked Board-confirmed in STORY-003 through STORY-010
 
 ## Public contracts
 
 There is no HTTP or application API.
 
-- CTA URI: `mailto:hello@zoud.ai?subject=Free%20call%20request`. Both CTAs use the same exported constant and render as ordinary anchors.
+- CTA URI: `mailto:hello@zoud.ae?subject=Free%20call%20request`. Both CTAs use the same exported constant and render as ordinary anchors.
 - Build contract: `next build` with `output: 'export'` produces provider-neutral files in `out/` and no server bundle is required at runtime.
 - FAQ contract: each question is a native, independently operable `<details><summary>…</summary>…</details>` disclosure. No client component or persisted state is needed.
 - Component contract: `page.tsx` injects typed props; sections emit semantic HTML and may depend only on content types and UI primitives.

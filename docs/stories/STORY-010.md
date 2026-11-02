@@ -20,7 +20,7 @@ The last chance to convert. A short, warm closing line + CTA, followed by minima
 | CTA headline | "Tell us what you want to build." (Board confirmed) |
 | CTA button | "Book a free call" (same as Hero) |
 | Footer — name | Zoud AI Studio (Board confirmed) |
-| Footer — email | hello@zoud.ai (Board confirmed) |
+| Footer — email | hello@zoud.ae (Board confirmed) |
 | Footer — copyright | © {year} {Studio Name}. All rights reserved. |
 
 ## Files likely to touch
