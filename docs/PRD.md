@@ -1,6 +1,6 @@
 ---
 title: "Landing Page"
-status: draft
+status: approved
 created: 2026-11-02
 updated: 2026-11-02
 ---
@@ -25,7 +25,7 @@ Convert visiting founders into booked 20-minute discovery calls.
 ## Assumptions
 
 - Visitors arrive from a LinkedIn post (mobile-first context).
-- Studio name: "Zoud AI Studio". The contact email (hello@zoud.ai) and prices (Starter $499, Growth $1,499, Pro $3,999) are placeholders. TODO: confirm with the Board.
+- Studio name: "Zoud AI Studio". Contact email confirmed: hello@zoud.ai. Prices confirmed: Starter $499, Growth $1,499, Pro $3,999.
 - All copy in the stories is a first draft by the PM. TODO: confirm with the Board.
 
 ## Requirements
