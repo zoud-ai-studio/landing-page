@@ -1,13 +1,114 @@
-* {
+:root {
+  --color-background: #ffffff;
+  --color-primary: #0a1628;
+  --color-text: #102033;
+  --color-surface: #f6f8fa;
+  --color-accent: #0f766e;
+  --color-accent-on-dark: #5eead4;
+  --color-border: rgb(16 32 51 / 14%);
+  --font-sans: "Inter", sans-serif;
+  --font-caption: 0.875rem;
+  --font-body: 1rem;
+  --font-body-large: 1.125rem;
+  --font-heading-small: 1.5rem;
+  --font-heading-medium: clamp(2rem, 5vw, 3rem);
+  --font-heading-large: clamp(3rem, 7vw, 4rem);
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-5: 1.5rem;
+  --space-6: 2rem;
+  --space-7: 3rem;
+  --space-8: 4rem;
+  --space-9: 6rem;
+  --radius-card: 1rem;
+  --radius-button: 0.75rem;
+  --content-width: 72rem;
+  --shadow-card: 0 1rem 2rem rgb(10 22 40 / 8%);
+}
+
+*,
+*::before,
+*::after {
   box-sizing: border-box;
 }
 
-html,
+html {
+  min-width: 20rem;
+  overflow-x: hidden;
+}
+
 body {
-  margin: 0;
   min-height: 100%;
+  margin: 0;
+  overflow-wrap: anywhere;
+  background: var(--color-background);
+  color: var(--color-text);
+  font-family: var(--font-inter), var(--font-sans);
+  font-size: var(--font-body);
+  line-height: 1.6;
 }
 
 main {
   min-height: 100vh;
+}
+
+h1,
+h2,
+h3,
+p {
+  margin-block: 0;
+}
+
+h1 {
+  font-size: var(--font-heading-medium);
+  line-height: 1.1;
+  letter-spacing: -0.025em;
+}
+
+p {
+  font-size: var(--font-body);
+}
+
+small {
+  font-size: var(--font-caption);
+}
+
+a,
+button {
+  min-width: 2.75rem;
+  min-height: 2.75rem;
+}
+
+a:focus-visible,
+button:focus-visible,
+summary:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 3px;
+}
+
+.button-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--space-3) var(--space-5);
+  border-radius: var(--radius-button);
+  background: var(--color-accent);
+  color: var(--color-background);
+  font-weight: 700;
+  line-height: 1.25;
+  text-decoration: none;
+}
+
+.base-layout {
+  display: grid;
+  gap: var(--space-5);
+  align-content: center;
+}
+
+@media (min-width: 48rem) {
+  .base-layout {
+    gap: var(--space-6);
+  }
 }
