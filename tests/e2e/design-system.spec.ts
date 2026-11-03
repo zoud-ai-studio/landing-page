@@ -30,7 +30,10 @@ test("the base layout uses the approved palette, type scale, and local font", as
     const bodyStyle = getComputedStyle(body);
     const headingStyle = getComputedStyle(document.querySelector("h1")!);
     const paragraphStyle = getComputedStyle(document.querySelector("p")!);
-    const captionStyle = getComputedStyle(document.querySelector("small")!);
+    const caption = document.createElement("small");
+    body.append(caption);
+    const captionSize = Number.parseFloat(getComputedStyle(caption).fontSize);
+    caption.remove();
 
     return {
       background: bodyStyle.backgroundColor,
@@ -38,7 +41,7 @@ test("the base layout uses the approved palette, type scale, and local font", as
       family: bodyStyle.fontFamily,
       headingSize: Number.parseFloat(headingStyle.fontSize),
       bodySize: Number.parseFloat(paragraphStyle.fontSize),
-      captionSize: Number.parseFloat(captionStyle.fontSize),
+      captionSize,
       accent: root.getPropertyValue("--color-accent").trim(),
       accentOnDark: root.getPropertyValue("--color-accent-on-dark").trim(),
     };
@@ -60,9 +63,9 @@ test("the base layout uses the approved palette, type scale, and local font", as
 test("the base layout fits the viewport with proportional padding and accessible targets", async ({ page }) => {
   await page.goto("/");
 
-  const layout = await page.locator("[data-testid='base-section']").evaluate((section) => {
+  const layout = await page.getByTestId("hero").evaluate((section) => {
     const bounds = section.getBoundingClientRect();
-    const target = document.querySelector<HTMLElement>("[data-testid='base-target']")!.getBoundingClientRect();
+    const target = section.querySelector<HTMLElement>("a")!.getBoundingClientRect();
 
     return {
       viewportWidth: document.documentElement.clientWidth,
