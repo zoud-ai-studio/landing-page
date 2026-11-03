@@ -39,8 +39,8 @@ test("the base layout uses the approved palette, type scale, and local font", as
       headingSize: Number.parseFloat(headingStyle.fontSize),
       bodySize: Number.parseFloat(paragraphStyle.fontSize),
       captionSize: Number.parseFloat(captionStyle.fontSize),
-      accentDark: root.getPropertyValue("--color-accent").trim(),
-      accentLight: root.getPropertyValue("--color-accent-on-dark").trim(),
+      accent: root.getPropertyValue("--color-accent").trim(),
+      accentOnDark: root.getPropertyValue("--color-accent-on-dark").trim(),
     };
   });
 
@@ -49,10 +49,10 @@ test("the base layout uses the approved palette, type scale, and local font", as
   expect(styles.family.toLowerCase()).toContain("inter");
   expect(styles.headingSize).toBeGreaterThan(styles.bodySize);
   expect(styles.bodySize).toBeGreaterThan(styles.captionSize);
-  expect(styles.accentDark.toLowerCase()).toBe("#0f766e");
-  expect(styles.accentLight.toLowerCase()).toBe("#5eead4");
+  expect(styles.accent.toLowerCase()).toBe("#5eead4");
+  expect(styles.accentOnDark).toBe("");
   expect(contrastRatio("#102033", "#ffffff")).toBeGreaterThanOrEqual(4.5);
-  expect(contrastRatio("#0f766e", "#ffffff")).toBeGreaterThanOrEqual(4.5);
+  expect(contrastRatio("#5eead4", "#0a1628")).toBeGreaterThanOrEqual(4.5);
   expect(contrastRatio("#5eead4", "#ffffff")).toBeLessThan(4.5);
   expect(externalFontRequests).toEqual([]);
 });

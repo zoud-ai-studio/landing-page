@@ -3,8 +3,7 @@
   --color-primary: #0a1628;
   --color-text: #102033;
   --color-surface: #f6f8fa;
-  --color-accent: #0f766e;
-  --color-accent-on-dark: #5eead4;
+  --color-accent: #5eead4;
   --color-border: rgb(16 32 51 / 14%);
   --font-sans: "Inter", sans-serif;
   --font-caption: 0.875rem;
@@ -95,7 +94,7 @@ summary:focus-visible {
   padding: var(--space-3) var(--space-5);
   border-radius: var(--radius-button);
   background: var(--color-accent);
-  color: var(--color-background);
+  color: var(--color-primary);
   font-weight: 700;
   line-height: 1.25;
   text-decoration: none;
