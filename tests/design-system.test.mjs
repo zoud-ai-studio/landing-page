@@ -5,13 +5,16 @@ import test from "node:test";
 test("global styles define the approved semantic design tokens", async () => {
   const css = await readFile("app/globals.css", "utf8");
 
-  for (const value of ["#0a1628", "#102033", "#ffffff", "#f6f8fa", "#0f766e", "#5eead4"]) {
+  for (const value of ["#0a1628", "#102033", "#ffffff", "#f6f8fa", "#5eead4"]) {
     assert.match(css.toLowerCase(), new RegExp(value));
   }
 
   for (const token of ["--color-background", "--color-text", "--color-surface", "--color-accent", "--space-1", "--space-9", "--radius-card", "--radius-button", "--content-width"]) {
     assert.match(css, new RegExp(`${token}:`));
   }
+
+  assert.doesNotMatch(css.toLowerCase(), /#0f766e/);
+  assert.doesNotMatch(css, /--color-accent-on-dark:/);
 });
 
 test("the licensed Inter variable font is self-hosted", async () => {
