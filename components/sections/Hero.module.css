@@ -1,0 +1,41 @@
+.hero {
+  display: grid;
+  min-height: min(100vh, 50rem);
+  align-items: center;
+}
+
+.content {
+  display: grid;
+  min-width: 0;
+  gap: var(--space-5);
+  justify-items: center;
+  text-align: center;
+}
+
+.headline {
+  max-width: 18ch;
+  font-size: var(--font-heading-medium);
+}
+
+.pitch {
+  max-width: 36rem;
+  font-size: var(--font-body-large);
+}
+
+.cta {
+  width: 100%;
+}
+
+@media (min-width: 48rem) {
+  .content {
+    gap: var(--space-6);
+  }
+
+  .headline {
+    font-size: var(--font-heading-large);
+  }
+
+  .cta {
+    width: auto;
+  }
+}
